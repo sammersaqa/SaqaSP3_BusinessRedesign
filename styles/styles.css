@@ -29,7 +29,7 @@ section.d-flex {
   background-image: url(/Assets/lawn\ care.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 500px;
+  min-height: 1030px;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
   position: relative;
@@ -169,7 +169,7 @@ footer p {
   }
 
   section.d-flex {
-    min-height: 400px;
+    min-height: 500px;
   }
 
   #about .card {
