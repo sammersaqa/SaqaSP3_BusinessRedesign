@@ -29,7 +29,7 @@ section.d-flex {
   background-image: url(/Assets/lawn\ care.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 1030px;
+  min-height: 1020px;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
   position: relative;
@@ -105,11 +105,11 @@ section.d-flex .btn-success {
 .card-title {
   color: #2e7d32;
   font-weight: 600;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: clamp(1rem, 2.5vw, 1rem);
 }
 
 .card-text {
-  font-size: clamp(0.875rem, 2vw, 0.95rem);
+  font-size: clamp(0.875rem, 2vw, 00.875rem);
 }
 
 .btn-outline-success {
@@ -169,7 +169,7 @@ footer p {
   }
 
   section.d-flex {
-    min-height: 500px;
+    min-height: 1725px;
   }
 
   #about .card {
@@ -194,7 +194,7 @@ footer p {
   }
 
   section.d-flex {
-    min-height: 350px;
+    min-height: 1725px;
     padding: 2rem 1rem !important;
   }
 
@@ -266,4 +266,28 @@ footer p {
     width: 100px;
     height: 100px;
   }
+}
+
+/* CONTACT PAGE BACKGROUND */
+body.contact-page {
+  background-image: url('../Assets/contactusBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+body.contact-page section.container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.contact-page form {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
