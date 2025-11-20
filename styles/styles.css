@@ -1,3 +1,4 @@
+/* GLOBAL STYLES */
 html {
   scroll-behavior: smooth;
 }
@@ -8,7 +9,7 @@ body {
   color: #333;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
@@ -23,36 +24,79 @@ body {
   color: #d4edda;
 }
 
-/* Hero Section */
+/* HOME PAGE HERO */
 section.d-flex {
-  background-image: url('../assets/images/lawn-bg.jpg');
+  background-image: url(/Assets/lawn\ care.jpg);
   background-size: cover;
   background-position: center;
+  min-height: 500px;
   color: #fff;
-  text-shadow: 1px 1px 2px #000;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  position: relative;
+}
+
+section.d-flex::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+section.d-flex > * {
+  position: relative;
+  z-index: 1;
 }
 
 section.d-flex h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
   font-weight: 700;
+}
+
+section.d-flex .lead {
+  font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
 section.d-flex .btn-success {
   background-color: #2e7d32;
   border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
 }
 
-/* About Card */
+/* ABOUT PAGE */
 #about .card {
   border-left: 5px solid #2e7d32;
   background-color: #fff;
+  min-height: auto;
+}
+
+#about .card.flex-row {
+  flex-direction: row;
+}
+
+#about .card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 #about h4 {
   margin-bottom: 0.5rem;
 }
 
-/* Services Grid */
+#testimonials .card {
+  transition: transform 0.3s ease;
+}
+
+#testimonials .card:hover {
+  transform: translateY(-5px);
+}
+
+/* SERVICES PAGE */
 #services h2 {
   color: #2e7d32;
   font-weight: 600;
@@ -61,10 +105,11 @@ section.d-flex .btn-success {
 .card-title {
   color: #2e7d32;
   font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
 .card-text {
-  font-size: 0.95rem;
+  font-size: clamp(0.875rem, 2vw, 0.95rem);
 }
 
 .btn-outline-success {
@@ -77,7 +122,12 @@ section.d-flex .btn-success {
   color: #fff;
 }
 
-/* Modal */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* MODAL FORM */
 .modal-content {
   border-radius: 8px;
 }
@@ -101,7 +151,7 @@ section.d-flex .btn-success {
   transform: translateY(0);
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   background-color: #1b1b1b;
   font-size: 0.9rem;
@@ -109,4 +159,111 @@ footer {
 
 footer p {
   margin: 0.3rem 0;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+/* TABLET RESPONSIVE (768px - 991px) */
+@media (max-width: 991px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  section.d-flex {
+    min-height: 400px;
+  }
+
+  #about .card {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .card-img-top {
+    height: 200px;
+  }
+}
+
+/* MOBILE RESPONSIVE (up to 767px) */
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .navbar {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  section.d-flex {
+    min-height: 350px;
+    padding: 2rem 1rem !important;
+  }
+
+  section.d-flex .btn-success {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  /* About page mobile adjustments */
+  #about .card.flex-row {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  #about .card img {
+    margin: 0 auto 1rem auto !important;
+  }
+
+  #about .card {
+    padding: 1.5rem !important;
+  }
+
+  /* Services page mobile adjustments */
+  .card-img-top {
+    height: 150px;
+  }
+
+  /* Footer mobile adjustments */
+  footer p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+
+  /* Modal mobile adjustments */
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+  }
+
+  .modal-footer .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* EXTRA SMALL MOBILE (up to 480px) */
+@media (max-width: 480px) {
+  section.d-flex h1 {
+    font-size: 1.5rem;
+  }
+
+  section.d-flex .lead {
+    font-size: 0.95rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+
+  #about .card img {
+    width: 100px;
+    height: 100px;
+  }
 }
