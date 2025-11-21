@@ -157,6 +157,7 @@ footer {
   font-size: 0.9rem;
 }
 
+
 footer p {
   margin: 0.3rem 0;
   font-size: clamp(0.8rem, 2vw, 0.9rem);
