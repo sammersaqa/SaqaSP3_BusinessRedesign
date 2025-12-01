@@ -1,4 +1,4 @@
-**Name:** Sammer Saqa  
+**Name:** Sammer Saqa  ***(Group 7 SOLO)***
 **Date Revised:** December 01, 2025
 
 ## Project Name
