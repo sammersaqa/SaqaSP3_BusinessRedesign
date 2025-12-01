@@ -135,17 +135,15 @@ section.d-flex .btn-success {
   object-fit: contain;
 }
 
-/* CAROUSEL STYLING - SHARPER IMAGES */
+/* CAROUSEL STYLING - SHOW MORE OF THE IMAGE */
 .carousel-inner {
-  max-height: 350px;
+  max-height: 400px;
 }
 
 .carousel-item img {
-  height: 350px;
-  object-fit: cover;
-  object-position: center;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  height: 400px;
+  object-fit: contain; /* Shows full image without cropping */
+  background-color: #2e2e2e; /* Dark background to match images */
 }
 
 .carousel-caption {
