@@ -14,7 +14,7 @@ A professional, responsive business website redesign for Legacy Lawn Care & Land
 - **Contact Page:** Full-page background with contact form and validation
 - **Responsive Design:** Mobile-first approach with breakpoints for tablets and desktop devices
 - **Interactive Elements:** Bootstrap modals, auto-rotating carousel, form validation, and hover effects
-- **Brand Identity:** Custom logo integration in navigation bar
+- **Brand Identity:** Custom logo integration in navigation bar ***Also made as a button to homepage***
 
 ### Technologies Used:
 - HTML5
