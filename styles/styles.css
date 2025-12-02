@@ -1,4 +1,6 @@
-/* GLOBAL STYLES */
+/* ============================================
+   1. GLOBAL STYLES
+   ============================================ */
 html {
   scroll-behavior: smooth;
 }
@@ -9,10 +11,19 @@ body {
   color: #333;
 }
 
-/* NAVBAR */
+
+/* ============================================
+   2. NAVBAR
+   ============================================ */
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-link {
@@ -24,8 +35,11 @@ body {
   color: #d4edda;
 }
 
-/* HOME PAGE HERO */
-section.d-flex {
+
+/* ============================================
+   3. HERO SECTION (HOME PAGE)
+   ============================================ */
+section.hero-section {
   background-image: url(/Assets/lawn\ care.jpg);
   background-size: cover;
   background-position: center;
@@ -35,7 +49,7 @@ section.d-flex {
   position: relative;
 }
 
-section.d-flex::before {
+section.hero-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -45,28 +59,31 @@ section.d-flex::before {
   background: rgba(0,0,0,0.3);
 }
 
-section.d-flex > * {
+section.hero-section > * {
   position: relative;
   z-index: 1;
 }
 
-section.d-flex h1 {
+section.hero-section h1 {
   font-size: clamp(1.75rem, 5vw, 2.5rem);
   font-weight: 700;
 }
 
-section.d-flex .lead {
+section.hero-section .lead {
   font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
-section.d-flex .btn-success {
+section.hero-section .btn-success {
   background-color: #2e7d32;
   border: none;
   padding: 0.75rem 2rem;
   font-size: 1.1rem;
 }
 
-/* ABOUT PAGE */
+
+/* ============================================
+   4. ABOUT PAGE
+   ============================================ */
 #about .card {
   border-left: 5px solid #2e7d32;
   background-color: #fff;
@@ -88,15 +105,14 @@ section.d-flex .btn-success {
   margin-bottom: 0.5rem;
 }
 
-#testimonials .card {
-  transition: transform 0.3s ease;
+.grey {
+  background-color: #2e2e2e;
 }
 
-#testimonials .card:hover {
-  transform: translateY(-5px);
-}
 
-/* SERVICES PAGE */
+/* ============================================
+   5. SERVICES PAGE
+   ============================================ */
 #services h2 {
   color: #2e7d32;
   font-weight: 600;
@@ -109,7 +125,7 @@ section.d-flex .btn-success {
 }
 
 .card-text {
-  font-size: clamp(0.875rem, 2vw, 00.875rem);
+  font-size: clamp(0.875rem, 2vw, 0.875rem);
 }
 
 .btn-outline-success {
@@ -128,22 +144,46 @@ section.d-flex .btn-success {
 }
 
 
-/* NAVBAR LOGO */
-.navbar-brand img {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
+/* ============================================
+   6. CONTACT PAGE
+   ============================================ */
+body.contact-page {
+  background-image: url("/Assets/contactusBg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-bottom: 5rem;
 }
 
-/* CAROUSEL STYLING - SHOW MORE OF THE IMAGE */
+body.contact-page section.container {
+  background: none;
+  color: white;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+body.contact-page form {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+
+/* ============================================
+   7. CAROUSEL
+   ============================================ */
 .carousel-inner {
   max-height: 400px;
 }
 
 .carousel-item img {
   height: 400px;
-  object-fit: contain; /* Shows full image without cropping */
-  background-color: #2e2e2e; /* Dark background to match images */
+  object-fit: contain;
+  background-color: #2e2e2e;
 }
 
 .carousel-caption {
@@ -159,28 +199,22 @@ section.d-flex .btn-success {
   padding: 20px;
 }
 
-.grey
-{background-color:#2e2e2e;}
 
-@media (max-width: 767px) {
-  .carousel-item img {
-    height: 250px;
-  }
-  
-  .carousel-inner {
-    max-height: 250px;
-  }
+/* ============================================
+   8. TESTIMONIALS
+   ============================================ */
+#testimonials .card {
+  transition: transform 0.3s ease;
 }
 
-/* Adjust for smaller screens */
-@media (max-width: 767px) {
-  .navbar-brand img {
-    height: 30px;
-  }
+#testimonials .card:hover {
+  transform: translateY(-5px);
 }
 
 
-/* MODAL FORM */
+/* ============================================
+   9. MODAL
+   ============================================ */
 .modal-content {
   border-radius: 8px;
 }
@@ -204,25 +238,32 @@ section.d-flex .btn-success {
   transform: translateY(0);
 }
 
-/* FOOTER */
+
+/* ============================================
+   10. FOOTER
+   ============================================ */
 footer {
   background-color: #1b1b1b;
   font-size: 0.9rem;
 }
-
 
 footer p {
   margin: 0.3rem 0;
   font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
-/* TABLET RESPONSIVE (768px - 991px) */
+
+/* ============================================
+   11. RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
+/* Tablet Responsive (768px - 991px) */
 @media (max-width: 991px) {
   .navbar-brand {
     font-size: 1.25rem;
   }
 
-  section.d-flex {
+  section.hero-section {
     min-height: 1725px;
   }
 
@@ -236,10 +277,15 @@ footer p {
   }
 }
 
-/* MOBILE RESPONSIVE (up to 767px) */
+/* Mobile Responsive (up to 767px) */
 @media (max-width: 767px) {
+  /* Navbar */
   .navbar-brand {
     font-size: 1.1rem;
+  }
+  
+  .navbar-brand img {
+    height: 30px;
   }
 
   .navbar {
@@ -247,18 +293,19 @@ footer p {
     padding-right: 1rem !important;
   }
 
-  section.d-flex {
+  /* Hero Section */
+  section.hero-section {
     min-height: 1725px;
     padding: 2rem 1rem !important;
   }
 
-  section.d-flex .btn-success {
+  section.hero-section .btn-success {
     padding: 0.6rem 1.5rem;
     font-size: 1rem;
     width: 100%;
   }
 
-  /* About page mobile adjustments */
+  /* About Page */
   #about .card.flex-row {
     flex-direction: column !important;
     text-align: center;
@@ -272,18 +319,27 @@ footer p {
     padding: 1.5rem !important;
   }
 
-  /* Services page mobile adjustments */
+  /* Services Page */
   .card-img-top {
     height: 150px;
   }
 
-  /* Footer mobile adjustments */
+  /* Carousel */
+  .carousel-item img {
+    height: 250px;
+  }
+  
+  .carousel-inner {
+    max-height: 250px;
+  }
+
+  /* Footer */
   footer p {
     font-size: 0.75rem;
     line-height: 1.6;
   }
 
-  /* Modal mobile adjustments */
+  /* Modal */
   .modal-dialog {
     margin: 0.5rem;
   }
@@ -298,13 +354,13 @@ footer p {
   }
 }
 
-/* EXTRA SMALL MOBILE (up to 480px) */
+/* Extra Small Mobile (up to 480px) */
 @media (max-width: 480px) {
-  section.d-flex h1 {
+  section.hero-section h1 {
     font-size: 1.5rem;
   }
 
-  section.d-flex .lead {
+  section.hero-section .lead {
     font-size: 0.95rem;
   }
 
@@ -320,31 +376,4 @@ footer p {
     width: 100px;
     height: 100px;
   }
-}
-
-/* CONTACT PAGE BACKGROUND */
-body.contact-page {
-  background-image: url("/Assets/contactusBg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  padding-bottom: 5rem; /* if using fixed footer */
-}
-
-
-body.contact-page section.container {
-  background: none;   /* removes the box background */
-  color: white;
-  border-radius: 0;   /* optional: remove rounded corners */
-  box-shadow: none;   /* optional: remove shadow */
-  padding: 2rem;      /* keep spacing around the form */
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-body.contact-page form {
-  background-color: transparent !important;
-  box-shadow: none !important;
 }
