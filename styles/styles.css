@@ -159,6 +159,9 @@ section.d-flex .btn-success {
   padding: 20px;
 }
 
+.grey
+{background-color:#2e2e2e;}
+
 @media (max-width: 767px) {
   .carousel-item img {
     height: 250px;
