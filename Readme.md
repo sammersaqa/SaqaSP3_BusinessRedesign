@@ -34,6 +34,8 @@ A professional, responsive business website redesign for Legacy Lawn Care & Land
 
 ## Revision History
 
+- Figma created and approved
+- Added original website in Figma
 - Initial website structure created
 - Implemented responsive navigation bar with logo across all pages
 - Designed hero section with background image overlay
