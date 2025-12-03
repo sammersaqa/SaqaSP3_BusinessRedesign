@@ -85,7 +85,7 @@ section.hero-section .btn-success {
    4. ABOUT PAGE
    ============================================ */
 #about .card {
-  border-left: 5px solid #2e7d32;
+  border: 5px solid #2e7d32;
   background-color: #fff;
   min-height: auto;
 }
