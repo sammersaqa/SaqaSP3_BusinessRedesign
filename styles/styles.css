@@ -80,6 +80,27 @@ section.hero-section .btn-success {
   font-size: 1.1rem;
 }
 
+/* Desktop/Laptop Responsive (1024px and up) */
+@media (min-width: 1024px) {
+  section.hero-section {
+    min-height: 70vh; /* Use viewport height for better scaling */
+  }
+}
+
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  section.hero-section {
+    min-height: 65vh; /* Shorter hero for large screens */
+  }
+}
+
+/* Extra Large Desktop (1920px and up) */
+@media (min-width: 1920px) {
+  section.hero-section {
+    min-height: 60vh; /* Even shorter for very large screens */
+  }
+}
+
 
 /* ============================================
    4. ABOUT PAGE
