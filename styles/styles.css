@@ -19,16 +19,28 @@ body {
 /* ============================================
    2. NAVBAR
    ============================================ */
+.navbar {
+  position: relative;
+}
+
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
   font-family: "Inter", sans-serif;
+  white-space: nowrap;
+  flex-grow: 0 !important;
+  flex-shrink: 0;
 }
 
 .navbar-brand img {
   height: 40px;
   width: auto;
   object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  white-space: nowrap;
 }
 
 .nav-link {
@@ -40,6 +52,15 @@ body {
   color: #d4edda;
 }
 
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 
 /* ============================================
    3. HERO SECTION (HOME PAGE)
@@ -48,7 +69,7 @@ section.hero-section {
   background-image: url(/Assets/lawn\ care.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 1020px;
+  min-height: 60vh;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   position: relative;
@@ -109,7 +130,6 @@ section.hero-section .btn-success {
 @media (min-width: 1024px) {
   section.hero-section {
     min-height: 70vh;
-    /* Use viewport height for better scaling */
   }
 }
 
@@ -117,7 +137,6 @@ section.hero-section .btn-success {
 @media (min-width: 1440px) {
   section.hero-section {
     min-height: 65vh;
-    /* Shorter hero for large screens */
   }
 }
 
@@ -125,7 +144,6 @@ section.hero-section .btn-success {
 @media (min-width: 1920px) {
   section.hero-section {
     min-height: 60vh;
-    /* Even shorter for very large screens */
   }
 }
 
@@ -144,8 +162,8 @@ section.hero-section .btn-success {
 }
 
 #about .card img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -339,12 +357,17 @@ footer p {
   }
 
   section.hero-section {
-    min-height: 1725px;
+    min-height: 50vh;
   }
 
   #about .card {
     height: auto !important;
     min-height: auto !important;
+  }
+
+  #about .card img {
+    width: 130px;
+    height: 130px;
   }
 
   .card-img-top {
@@ -357,21 +380,30 @@ footer p {
 
   /* Navbar */
   .navbar-brand {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .brand-text {
+    display: inline-block;
+    font-size: 1rem;
   }
 
   .navbar-brand img {
-    height: 30px;
+    height: 35px;
   }
 
   .navbar {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  .navbar-toggler {
+    margin-left: 0.5rem;
   }
 
   /* Hero Section */
   section.hero-section {
-    min-height: 1725px;
+    min-height: 50vh;
     padding: 2rem 1rem !important;
   }
 
@@ -389,6 +421,8 @@ footer p {
 
   #about .card img {
     margin: 0 auto 1rem auto !important;
+    width: 120px;
+    height: 120px;
   }
 
   #about .card {
@@ -432,12 +466,28 @@ footer p {
 
 /* Extra Small Mobile (up to 480px) */
 @media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .brand-text {
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand img {
+    height: 30px;
+  }
+
   section.hero-section h1 {
     font-size: 1.5rem;
   }
 
   section.hero-section .lead {
     font-size: 0.95rem;
+  }
+
+  section.hero-section {
+    min-height: 45vh;
   }
 
   .card-title {

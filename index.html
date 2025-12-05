@@ -9,19 +9,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Fugaz+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Fugaz+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body class="marge">
 
   <nav class="navbar navbar-expand-lg bg-success navbar-dark px-3 px-lg-4">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="/index.html">
+      <a class="navbar-brand d-flex align-items-center flex-grow-0" href="/index.html">
         <img src="/Assets/LOGO.jpg" alt="Legacy Lawn Care Logo" height="40" class="me-2">
-        Legacy Lawn Care
+        <span class="brand-text">Legacy Lawn Care</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -98,7 +98,7 @@
 
   <div class="modal fade" id="quoteModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-      <form class="modal-content">
+      <form class="modal-content" id="quoteForm">
         <div class="modal-header">
           <h5 class="modal-title">Request a Quote</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
@@ -110,13 +110,11 @@
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-success">Submit</button>
-          <button type="button" class="btn btn-outline-secondary">Print</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="window.print()">Print</button>
         </div>
       </form>
     </div>
   </div>
-
-  
 
   <footer id="contact" class="bg-dark text-white text-center fixed-bottom py-4 mt-5">
     <div class="container">
