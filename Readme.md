@@ -67,10 +67,10 @@ https://github.com/sammersaqa/SaqaSP3_BusinessRedesign.git
 ## Peer Review
 **Reviewed By:** Nicolas Gonzaba  
 **Date:** December 5 2025  
-**Comments:** Code and design looks really good, but i have some crtiques.
+<!-- **Comments:** Code and design looks really good, but i have some crtiques.
 
 Home Page: print button doesn't work. The responsiveness is a bit wonky at tablet and phone sizes, the image is way too big for the content forcing you to scroll to see any of the actual page content. Additionally there is no alert for the submit button
 
 About page: On tablet and phone the image is way too small compared to the size of the quote
 
-services page: again no alert for the submit button
+services page: again no alert for the submit button --> This has been corrected and shown to Nicolas
